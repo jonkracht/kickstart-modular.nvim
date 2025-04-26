@@ -20,26 +20,34 @@ require('lazy').setup({
   -- Use `opts = {}` to automatically pass options to a plugin's `setup()` function, forcing the plugin to be loaded.
   --
 
-
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
+  -- add git signs to left gutter.  shortcuts begin with bracket [, ]
   require 'kickstart/plugins/gitsigns',
 
+  -- display pending keybindings
   require 'kickstart/plugins/which-key',
 
+  -- fuzzy finder (files, shortcuts)
   require 'kickstart/plugins/telescope',
 
+  -- configure LSP's
   require 'kickstart/plugins/lspconfig',
 
+  -- Pre-write autoformatter
   require 'kickstart/plugins/conform',
 
+  -- Autocompletion; `:help ins-completion` documents
   require 'kickstart/plugins/cmp',
 
+  -- Set colorscheme
   require 'kickstart/plugins/tokyonight',
 
+  -- Set highlight style for certain keywords (ex. TODO, NOTE, etc)
   require 'kickstart/plugins/todo-comments',
 
+  -- Assorted small plugins (https://github.com/echasnovski/mini.nvim)
   require 'kickstart/plugins/mini',
 
   require 'kickstart/plugins/treesitter',
@@ -52,7 +60,8 @@ require('lazy').setup({
   --
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
-  --
+
+  -- Debugger
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
